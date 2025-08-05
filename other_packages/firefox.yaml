@@ -1,0 +1,8 @@
+- name: Install firefox
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Install Firefox
+      ansible.builtin.package:
+        name: firefox
+        state: latest

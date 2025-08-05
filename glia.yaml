@@ -1,0 +1,63 @@
+- name: Setup the laptop with all common packages
+  hosts: localhost
+  connection: local
+  vars_files:
+    - vars/common_packages.yaml
+  tasks:
+    - name: Install Required Packages
+      ansible.builtin.package:
+        name: "{{ common_packages }}"
+        state: latest
+      tags: always
+
+    - name: Install Recommended Packages only if recommended tag is used
+      ansible.builtin.package:
+        name: "{{ recommended_packages }}"
+        state: latest
+      tags: [ never, recommended ]
+
+    # AWS Config
+    - name: Check if an aws config already exists
+      stat:
+        path: "{{ ansible_env.HOME }}/.aws/config"
+      register: register_aws_path
+      tags: always
+
+    - name: Ensure the aws configuration directory exists
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.aws"
+        state: directory
+        mode: '0700'
+        owner: "{{ ansible_facts.user_id }}"
+        #group: "{{ ansible_facts.user_id }}"
+        recurse: yes
+      # We want to create a config only if one doesn't already exist to not clobber
+      # any existing config
+      when: not register_aws_path.stat.exists
+      tags: always
+
+    # Kubectl
+    - name: Check if an kube config already exists
+      stat:
+        path: "{{ ansible_env.HOME }}/.kube/config"
+      register: register_kube_path
+      tags: always
+
+    - name: Ensure the kube configuration directory exists
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.kube"
+        state: directory
+        mode: '0700'
+        owner: "{{ ansible_facts.user_id }}"
+        recurse: yes
+      # We want to create a config only if one doesn't already exist to not clobber
+      # any existing config
+      when: not register_kube_path.stat.exists
+      tags: always
+
+    - name: Set kubectl environment variable
+      ansible.builtin.lineinfile:
+        path: "~/.zshrc"
+        line: "export KUBECONFIG=\"$HOME/.kube/config\""
+        state: present
+      tags: always

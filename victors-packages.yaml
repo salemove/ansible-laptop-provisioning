@@ -1,0 +1,26 @@
+- import_playbook: glia.yaml
+- import_playbook: other_packages/oh-my-zsh.yaml
+- import_playbook: other_packages/vscodium.yaml
+- import_playbook: other_packages/firefox.yaml
+
+- name: Configure Victors Laptop
+  hosts: localhost
+  connection: local
+  vars:
+    ZSH_THEME: af-magic
+  tasks:
+
+    - name: Change Oh My Zsh theme to agnoster
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        regexp: '^ZSH_THEME=".*"$'
+        line: 'ZSH_THEME="{{ ZSH_THEME }}"'
+        state: present
+
+    - name: Add vscode code ZSH alias
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: "alias code=codium"
+        create: yes
+        insertafter: EOF # Adds the line at the end of the file
+        state: present

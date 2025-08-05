@@ -1,0 +1,12 @@
+# This is a list of packages that should be installed on every laptop
+common_packages:
+  - awscli@2
+  - git
+  - google-chrome
+  - kubectl
+  - slack
+  - terraform
+  - zoom
+
+recommended_packages:
+  - k9s

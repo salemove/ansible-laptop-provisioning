@@ -1,0 +1,17 @@
+- name: Install vscodium
+  hosts: localhost
+  connection: local
+  tasks:
+    # Install vscodium
+    - name: Install Required Packages
+      ansible.builtin.package:
+        name: vscodium
+        state: latest
+
+    - name: Add vscode code ZSH alias
+      ansible.builtin.lineinfile:
+        path: "{{ ansible_env.HOME }}/.zshrc"
+        line: "alias code=codium"
+        create: yes
+        insertafter: EOF # Adds the line at the end of the file
+        state: present
