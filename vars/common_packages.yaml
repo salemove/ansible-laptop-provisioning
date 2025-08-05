@@ -1,6 +1,7 @@
 # This is a list of packages that should be installed on every laptop
 common_packages:
   - awscli@2
+  - aws-vpn-client
   - git
   - google-chrome
   - kubectl

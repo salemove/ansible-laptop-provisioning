@@ -4,6 +4,11 @@
   vars_files:
     - vars/common_packages.yaml
   tasks:
+    - name: Install Rosetta 2 (Required for aws-vpn-client)
+      command: /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+      args:
+        creates: /Library/Apple/System/Library/LaunchDaemons/com.apple.oah.applicationownership.plist
+
     - name: Install Required Packages
       ansible.builtin.package:
         name: "{{ common_packages }}"
