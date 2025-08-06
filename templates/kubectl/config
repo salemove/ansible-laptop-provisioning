@@ -1,0 +1,53 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1URXdOREl4TlRrek0xb1hEVEk1TVRFd01USXhOVGt6TTFvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS0dBCmtJMFppaFJhQlVZalJNU0VqTU41QjdDaVdTZWZNamRXUTdlWGVyVzEzK3haSTljZzJudGV4NjNEQTBpMkZzcmsKU3V4dlY3ZXVidnI0b2FSZjZTV3B4YytmVm9DbkdxMEFVbEJwdGhHeXJBSEpyODg4LzVLVFg0dWk1Z2hCZElwVQo0NGV3ekFYRVRuK0hCK3VZbk5QUDkxcE1MNGJWQ09JQUR6cGNIMlh4aWRpcG1aV3ViSE1WOElEaVhqREtvVHZ0CnliaVFUTndsakxXZE1jU0t2TS9KcTVhRnJHc1k3cjBiL3hNOXhNamYvZ0J0M3grdk5naXZBTVlwRXp3bXZoeGkKem5FQzFoNmwzTDZVZlB3QXBJeXVQaFZVdlJiUnhXclgzb2hjNkhNZ0JFb2FIT20wWEVNN280YkxxMGdQUkhyKwpGMm1GcDZEV3ByWTMvZXBOTjRNQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFKakE0Nm9Vdi95UytING5MVm9NajcxSkE1eFIKS1lUUFF1QmtXaFplWTVTOFBpcWxQaXI0alNhc3E1SUNtT0pzdDBDcjdFN3hRUGVTS2dqa3ZtNXE1eUljQzFxYQpUWlFqdGRKck5STWtobDhWTjZNSWJudVIrVnlPN25RQisrU2lWdlRaVXk5Z0dDY3hZUzNleVJmc2V3eTRUTm05CkJlbHorSm1sckVYNDd2NzlyVDFhSW9tQ0JyL3prN3k1dGgvLzI2MW9uZjVuT3JQbjFxczV1eHJMSlNHdEFiWkcKUHltQ3lNK05QR3RKRURxWUVROHk3c0xncmx3WThyd0RGYlAreGpFbEhsb00zYU9LTWZhb0FwNWdncWFLOEpmUgp6Smh4VXpMeWxkN084OHRDcmV3bllTdi9CbXlTanU3a1d3VWNiZmR1ZXErbW1IUW1QSHVUaHZYblhCST0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://DDFC0D4D296B2B11E5B8F71D5814EBE1.yl4.us-west-2.eks.amazonaws.com
+  name: k8s-dev
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1Ea3lOekUyTVRjME5Gb1hEVEk1TURreU5ERTJNVGMwTkZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBSndlCktaUGhVeG5UVlpEajRnYVNYWlRDcWF2WDd4TzdYQnZZT0JEei9tTURDeUlpTWRrcm53WnQ2UytOK0FrOHVIcUUKN3NtV3BpVUh2NnROd0FnOHg1OW9IMm5VUXlFazdZVnZxbmREL1c0SlJmQ2lGVnVDbFlWcE5xdDZNWnNRdVcxYQpjZXhqcnBXaG9iVDY3SlJCMDlEYWcwUHluRUFBSnkrZmYrSkxyVnlteXpxTW4xUHJyK3RHVW5RSE41K2RYeGRTCjM0V3ZnZGZxMHlDKzB2SzBDUHNBa2dpY1hmRWhUbHd4OVZibUg2cXdMaTFJemtwY2htcmFNWkJwWk8ySFp0TGoKRlhiaG80REFQU3E0ZHpicWpNd09uQzU4Q2pTU09BbkplZ0FWeVBKRm9GKzNlVE9wY2I2UGVTMFNJdDVTcnh0NAo5ajB5Z0FJSUhsTVR3andaMDJjQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFETXZDWHpHaHZaVWx3ODB5T0lXUHRSN1pNS1EKZ3hxS093WGYzTHVBSTJud2k4RkY0cGZ1OFJsM01oVVpSSU9FMjRmNjVhbEl2OEZEMER1ZzZLbmYyZ051cGUycwplSzJMcHdqQzIwa2FtWittRVBURm9FcWJRbjdzUnB0NTREYTNvVmJ5SW0wdnBpR1V5Ty94ajFpVXVFTlBsRHIzCjBuNFlOV2dPSnFzQ1BWbk81T3dKRldveFMvWFBITTRXQkxNMHBNbFJQam8rdzM5U2FWeWZJbXl6ZzVva2MwQm0KYXV5KzFGQTc3NllrSXpkOUxiU3RlSjZUVmlwZGJseDErdXlLaVQ1Mnk0ZE5aMlNIOTRJc1ZjRTcxeit2SXo1VwphZ1AzS2lyNVRuVmxLZHNHd3pkRzU2Tk1FaUcrWXVqb01sWFpsbXFJYSsrTWZ4L0o2bXRySE55dWR3OD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://F53E0672AC4FD4035177D011D8C9E36A.gr7.us-east-1.eks.amazonaws.com
+  name: k8s-prod-na
+contexts:
+- context:
+    cluster: k8s-dev
+    namespace: argocd
+    user: k8s-dev
+  name: k8s-dev
+- context:
+    cluster: k8s-prod-na
+    namespace: argocd
+    user: k8s-prod-na
+  name: k8s-prod-na
+current-context: k8s-dev
+kind: Config
+preferences: {}
+users:
+- name: k8s-dev
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - token
+      - -i
+      - k8s-dev
+      command: aws-iam-authenticator
+      env:
+      - name: AWS_PROFILE
+        value: <whatever you use for aws sso login --profile <AWS_PROFILE>>
+      interactiveMode: IfAvailable
+      provideClusterInfo: false
+- name: k8s-prod-na
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - token
+      - -i
+      - k8s-prod-na
+      command: aws-iam-authenticator
+      env:
+      - name: AWS_PROFILE
+        value: <whatever you use for aws sso login --profile <AWS_PROFILE>>
+      interactiveMode: IfAvailable
+      provideClusterInfo: false

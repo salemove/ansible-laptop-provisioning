@@ -11,3 +11,5 @@ common_packages:
 
 recommended_packages:
   - k9s
+  - aws-iam-authenticator # required for k9s
+  - htop
