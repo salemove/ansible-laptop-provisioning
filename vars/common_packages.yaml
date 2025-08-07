@@ -5,6 +5,7 @@ common_packages:
   - git
   - google-chrome
   - kubectl
+  - linkerd
   - slack
   - terraform
   - zoom
